@@ -5,11 +5,13 @@ A website vulnerable to XSS and CSRF attacks
 ## Setup
 
 Install Node.js: `https://nodejs.org/en/download/`  
-Run `npm install` to install dependencies.
+Run `npm install` to install dependencies
 
 ## Run
 
-Open up two terminals:
+- Open up a terminal and run `node index.js`
+- Load `http://index.lvh.me:3000/` on your browser
 
-- Run `node index.js` on the first terminal - open up `http://index.lvh.me:3000/`
-- Run `node dogs.js` on the second terminal - open up `http://dogs.lvh.me:3010/dogs.html`
+## Exploit
+
+dogs.html is a simple static page for building XSS/CSRF attacks.
