@@ -1,9 +1,20 @@
 var express = require('express');
+var cors = require('cors');
 var app = express();
 
 let amount = 100000;
 
 app.use(express.static('.'));
+var trustedOrigins = ['http://localhost:3000', 'http://index.lvh.me:3000/'];
+app.use(cors({
+    origin: function(origin, callback) {
+        if (!origin) return callback(null, true);
+        if (trustedOrigins.indexOf(origin) === -1) {
+            return callback(new Error('DOOMED!!!'), false);
+        }
+        return callback(null, true);
+    }
+}));
 
 app.get('/', function (req, res) {
     res.redirect('index.html');

